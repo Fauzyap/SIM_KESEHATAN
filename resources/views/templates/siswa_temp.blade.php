@@ -5,42 +5,43 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>SIM KESEHATAN</title>
 
-  <script src="/dist/modules/jquery.min.js"></script>
-  <script src="/dist/modules/popper.js"></script>
-  <script src="/dist/modules/tooltip.js"></script>
-  <script src="/dist/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="/dist/modules/moment.min.js"></script>
-  <script src="/dist/js/stisla.js"></script>
+  <script src="../dist/modules/jquery.min.js"></script>
+  <script src="../dist/modules/popper.js"></script>
+  <script src="../dist/modules/tooltip.js"></script>
+  <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../dist/modules/moment.min.js"></script>
+  <script src="../dist/js/stisla.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   
   <!-- JS Libraies -->
-  <script src=">/dist/modules/datatables/datatables.min.js"></script>
-  <script src=">/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src=">/dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
-  <script src=">/dist/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src=">../dist/modules/datatables/datatables.min.js"></script>
+  <script src=">../dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script src=">../dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+  <script src=">../dist/modules/jquery-ui/jquery-ui.min.js"></script>
 
   <!-- Page Specific JS File -->
-  <script src=">/dist/js/page/modules-datatables.js"></script>
+  <script src=">../dist/js/page/modules-datatables.js"></script>
   
   <!-- Template JS File -->
-  <script src="/dist/js/scripts.js"></script>
-  <script src="/dist/js/custom.js"></script>
+  <script src="../dist/js/scripts.js"></script>
+  <script src="../dist/js/custom.js"></script>
 
 
   <!-- General CSS Files -->
   <link rel="shortcut icon" href="{!! asset('/image/logo-wk.png') !!}">
-  <link rel="stylesheet" href="{!! asset('/dist/modules/bootstrap/css/bootstrap.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('/dist/modules/fontawesome/css/all.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('/dist/modules/ionicons/css/ionicons.min.css') !!}">
+  <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/modules/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="{!! asset('/dist/modules/datatables/datatables.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('/dist/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('/dist/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css') !!}">
+  <link rel="stylesheet" href="../dist/modules/datatables/datatables.min.css">
+  <link rel="stylesheet" href="../dist/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../dist/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
   
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{!! asset('/dist/css/style.css') !!}">
-  <link rel="stylesheet" type="text/css" href="{!! asset('dist/dist/sweetalert.css') !!}">
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" type="text/css" href="dist../dist/sweetalert.css">
 </head>
 
 <body class="layout-3">
@@ -60,18 +61,14 @@
         </form>
         <ul class="navbar-nav navbar-right">
           
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="{!! asset('/dist/img/avatar/avatar-1.png') !!}" width="20" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block"></div></a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </div>
-          </li>
+          
+          <form action="logout" method="post">
+            @csrf
+            <button>Logout</button>
+          </form>
         </ul>
       </nav>
+      
 
       <nav class="navbar navbar-secondary navbar-expand-lg">
         <div class="container justify-content-center ">
@@ -91,25 +88,25 @@
       {{-- isian--}}
       @yield('container')
       {{--isian--}}
-  <script src="{!! asset('/dist/modules/jquery.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/popper.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/tooltip.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/bootstrap/js/bootstrap.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/nicescroll/jquery.nicescroll.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/moment.min.js') !!}"></script>
-  <script src="{!! asset('/dist/js/stisla.js') !!}"></script>
+  <script src="../dist/modules/jquery.min.js"></script>
+  <script src="../dist/modules/popper.js"></script>
+  <script src="../dist/modules/tooltip.js"></script>
+  <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js') !!}"></script>
+  <script src="../dist/modules/moment.min.js') !!}"></script>
+  <script src="../dist/js/stisla.js') !!}"></script>
   
   <!-- JS Libraies -->
-  <script src="{!! asset('/dist/modules/datatables/datatables.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js') !!}"></script>
-  <script src="{!! asset('/dist/modules/jquery-ui/jquery-ui.min.js') !!}"></script>
+  <script src="../dist/modules/datatables/datatables.min.js') !!}"></script>
+  <script src="../dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') !!}"></script>
+  <script src="../dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js') !!}"></script>
+  <script src="../dist/modules/jquery-ui/jquery-ui.min.js') !!}"></script>
 
   <!-- Page Specific JS File -->
-  <script src="{!! asset('/dist/js/page/modules-datatables.js') !!}"></script>
+  <script src="../dist/js/page/modules-datatables.js') !!}"></script>
   
   <!-- Template JS File -->
-  <script src="{!! asset('/dist/js/scripts.js') !!}"></script>
-  <script src="{!! asset('/dist/js/custom.js') !!}"></script>
+  <script src="../dist/js/scripts.js') !!}"></script>
+  <script src="../dist/js/custom.js') !!}"></script>
 </body>
 </html>
