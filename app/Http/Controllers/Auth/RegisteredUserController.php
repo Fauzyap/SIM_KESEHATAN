@@ -34,16 +34,17 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'name' => 'required|string|max:255',
+            'password' => 'required|string|confirmed|min:8',
+            'username' => 'required|string|max:255',
         ]);
 
-        $user = User::create([
+        Auth::login($user = User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-        ]);
+        ]));
         $user->attachRole($request->role_id);
         event(new Registered($user));
 
